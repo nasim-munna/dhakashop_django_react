@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-na$f27=7(^c&ty9h1d8cxcqnwd4!imc%-h^5mev--mq!nk!@k9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -195,3 +195,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-demo'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
