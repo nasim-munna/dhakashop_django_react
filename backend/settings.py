@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'cloudinary_storage',
-    'django.contrib.staticfiles',
     'cloudinary',
 ]
 
