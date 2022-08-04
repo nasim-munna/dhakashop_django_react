@@ -10,6 +10,7 @@ from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 # Create your views here.
 @api_view(['GET'])
 def getProducts(request):
+
     query = request.query_params.get('keyword')
     if query == None:
         query= ''
@@ -57,7 +58,7 @@ def createProduct(request):
         brand = 'Sample Brand',
         countInStock= 0,
         category= 'Sample category',
-        description = 'Sample Description'
+        description = 'Sample Description',
     )
     serailizer = ProductSerializer(product,many=False)
     return Response (serailizer.data)

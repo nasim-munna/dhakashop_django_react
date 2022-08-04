@@ -31,7 +31,11 @@ INSTALLED_APPS = [
 
     'base.apps.BaseConfig',
     'rest_framework',
-    "corsheaders",
+    'corsheaders',
+
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -179,6 +183,14 @@ MEDIA_ROOT = 'static/images'
 
 MEDIA_URL = '/images/'
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dhviamdpb',
+    'API_KEY': '828747611352952',
+    'API_SECRET': 'F1vVj4zNIjt7LK7I8X7X1n3tBUk'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -193,6 +205,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 #AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-demo'
+# api fixed
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
